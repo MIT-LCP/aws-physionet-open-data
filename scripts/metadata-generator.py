@@ -15,20 +15,20 @@ yaml_dir = 'datasets'
 os.makedirs(yaml_dir, exist_ok=True)
 
 
-"""
-List the prefixes (directories) in the S3 bucket using boto3 without credentials.
-
-This function connects to an S3 bucket using anonymous access (no credentials) 
-to retrieve the list of all directory prefixes (CommonPrefixes) in the bucket. 
-The retrieved prefixes are stored in a pandas DataFrame.
-
-Parameters:
-    bucket_name (str): The name of the S3 bucket to be accessed.
-
-Returns:
-    DataFrame: A DataFrame containing the project slugs as a list of directory prefixes.
-"""
 def get_s3_open_bucket_prefixes(bucket_name):
+    """
+    List the prefixes (directories) in the S3 bucket using boto3 without credentials.
+
+    This function connects to an S3 bucket using anonymous access (no credentials) 
+    to retrieve the list of all directory prefixes (CommonPrefixes) in the bucket. 
+    The retrieved prefixes are stored in a pandas DataFrame.
+
+    Parameters:
+        bucket_name (str): The name of the S3 bucket to be accessed.
+
+    Returns:
+        DataFrame: A DataFrame containing the project slugs as a list of directory prefixes.
+    """
     s3 = boto3.client('s3', config=Config(signature_version=UNSIGNED))  # No sign request
     
     prefixes = []
@@ -59,34 +59,34 @@ def get_s3_open_bucket_prefixes(bucket_name):
     return df
 
 
-"""
-Save the list of S3 bucket prefixes to a CSV file.
-
-This function saves the DataFrame containing project slugs (directory prefixes) 
-into a CSV file for later reference.
-
-Parameters:
-    df (DataFrame): The DataFrame containing project slugs.
-    csv_file (str): The file path where the CSV will be saved.
-"""
 def export_s3_open_bucket_prefixes(df, csv_file):
+    """
+    Save the list of S3 bucket prefixes to a CSV file.
+
+    This function saves the DataFrame containing project slugs (directory prefixes) 
+    into a CSV file for later reference.
+
+    Parameters:
+        df (DataFrame): The DataFrame containing project slugs.
+        csv_file (str): The file path where the CSV will be saved.
+    """
     df.to_csv(csv_file, index=False)
     print(f"CSV file '{csv_file}' created successfully with {len(df)} project slugs.")
 
 
-"""
-Fetch the latest version of the project from the PhysioNet API.
-
-This function retrieves the latest version number of a project 
-from the PhysioNet API using its project slug.
-
-Parameters:
-    project_slug (str): The slug of the project (directory name in the bucket).
-
-Returns:
-    str: The latest version number of the project, or None if not found.
-"""
 def fetch_project_latest_version(project_slug):
+    """
+    Fetch the latest version of the project from the PhysioNet API.
+
+    This function retrieves the latest version number of a project 
+    from the PhysioNet API using its project slug.
+
+    Parameters:
+        project_slug (str): The slug of the project (directory name in the bucket).
+
+    Returns:
+        str: The latest version number of the project, or None if not found.
+    """
     url = f"https://physionet.org/api/v1/project/published/{project_slug}/"
     headers = {'User-Agent': 'Mozilla/5.0'}
     response = requests.get(url, headers=headers)
@@ -99,21 +99,21 @@ def fetch_project_latest_version(project_slug):
     return None
 
 
-"""
-Fetch project details from the PhysioNet API.
-
-This function retrieves the project details, including its name, description, 
-license, and documentation link. It fetches this information using the project slug 
-and the latest project version.
-
-Parameters:
-    project_slug (str): The slug of the project (directory name in the bucket).
-    project_latest_version (str): The latest version number of the project.
-
-Returns:
-    dict: A dictionary containing the project's name, description, license, and link.
-"""
 def fetch_project_details(project_slug, project_latest_version):
+    """
+    Fetch project details from the PhysioNet API.
+
+    This function retrieves the project details, including its name, description, 
+    license, and documentation link. It fetches this information using the project slug 
+    and the latest project version.
+
+    Parameters:
+        project_slug (str): The slug of the project (directory name in the bucket).
+        project_latest_version (str): The latest version number of the project.
+
+    Returns:
+        dict: A dictionary containing the project's name, description, license, and link.
+    """
     url = f"https://physionet.org/api/v1/project/published/{project_slug}/{project_latest_version}/"
     headers = {'User-Agent': 'Mozilla/5.0'}
     response = requests.get(url, headers=headers)
@@ -130,17 +130,17 @@ def fetch_project_details(project_slug, project_latest_version):
     return None
 
 
-"""
-Loop over each project slug and create a YAML file.
-
-For each project slug in the DataFrame, this function fetches the project details 
-using the PhysioNet API and generates a corresponding YAML file containing 
-metadata about the project.
-
-Parameters:
-    df (DataFrame): The DataFrame containing project slugs.
-"""
 def create_yaml_files(df):
+    """
+    Loop over each project slug and create a YAML file.
+
+    For each project slug in the DataFrame, this function fetches the project details 
+    using the PhysioNet API and generates a corresponding YAML file containing 
+    metadata about the project.
+
+    Parameters:
+        df (DataFrame): The DataFrame containing project slugs.
+    """
     for index, row in df.iterrows():
         project_slug = row['project_slug']
         
@@ -176,16 +176,16 @@ def create_yaml_files(df):
                 yaml.dump(yaml_content, yaml_file, default_flow_style=False, sort_keys=False)
 
 
-"""
-Create a ZIP file containing all YAML files.
-
-This function zips all the YAML files generated in the specified directory 
-into a single ZIP file for easy distribution.
-
-Parameters:
-    None
-"""
 def create_zip_file():
+    """
+    Create a ZIP file containing all YAML files.
+
+    This function zips all the YAML files generated in the specified directory 
+    into a single ZIP file for easy distribution.
+
+    Parameters:
+        None
+    """
     with zipfile.ZipFile(zip_file_path, 'w') as zipf:
         for root, dirs, files in os.walk(yaml_dir):
             for file in files:
@@ -194,15 +194,9 @@ def create_zip_file():
     print(f"YAML files successfully generated and zipped in {zip_file_path}")
 
 
-"""
-Main function to execute the steps to generate metadata for the open data program.
-
-This function retries the S3 bucket prefixes to generating YAML files.
-
-Parameters:
-    None
-"""
 def main():
+    # Generate metadata for the Open Data Program by retrieving the S3 bucket prefixes 
+    # and creating YAML files.
     df_prefixes = get_s3_open_bucket_prefixes('physionet-open')
     # export_s3_open_bucket_prefixes(df_prefixes, csv_file)
     create_yaml_files(df_prefixes)
