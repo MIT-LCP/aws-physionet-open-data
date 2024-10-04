@@ -1,0 +1,19 @@
+Name: Long Term ST Database
+Description: The Long-Term ST Database contains 86 lengthy ECG recordings of 80 human
+  subjects, chosen to exhibit a variety of events of ST segment changes, including
+  ischemic ST episodes, axis-related non-ischemic ST episodes, episodes of slow ST
+  level drift, and episodes containing mixtures of these phenomena. The database was
+  created to support development and evaluation of algorithms capable of accurate
+  differentiation of ischemic and non-ischemic ST events, as well as basic research
+  into mechanisms and dynamics of myocardial ischemia.
+Documentation: https://doi.org/10.13026/C2G01T
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C2G01T
+  ARN: arn:aws:s3:::physionet-open/ltstdb/
+  Region: us-east-1
+  Type: S3 Bucket

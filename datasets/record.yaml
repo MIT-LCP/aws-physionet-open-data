@@ -1,0 +1,16 @@
+Name: record - An application for capturing data from an HP CMS (Merlin) monitor
+Description: record is an MS-DOS application that determines what signals and measurements
+  are available from a Hewlett-Packard (Agilent/Philips) Merlin (a.k.a. CMS or Component
+  Monitoring System) patient monitor, and then logs all of the available data to disk
+  continuously until it is stopped by the user.
+Documentation: https://physionet.org/content/record/
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://physionet.org/content/record/
+  ARN: arn:aws:s3:::physionet-open/record/
+  Region: us-east-1
+  Type: S3 Bucket

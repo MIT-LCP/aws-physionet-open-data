@@ -1,0 +1,23 @@
+Name: 'SCG-RHC: Wearable Seismocardiogram Signal and Right Heart Catheter Database'
+Description: We are providing an open access dataset of 73 patients to study better
+  ways to monitor changes in pulmonary arterial pressure (PAP) and pulmonary capillary
+  wedge pressure (PCWP) using a small, non-invasive, chest-worn wearable patch. The
+  ground truth PAP and PCWP were measured using pulmonary artery wedge catheter during
+  the standard Right Heart Catheter (RHC) procedure, and they were modulated by infusing
+  systemic vasodilators. The wearable data including electrocardiogram (ECG) and tri-axial
+  seismocardiogram (SCG) were also measured simultaneously and time synchronized to
+  the ground truth data. Besides waveform records, this dataset also contains demographic
+  data such as sex, age, weight, height, heart failure status, etc.) and other RHC
+  values such as right atrial pressure, right ventricular pressure, stroke volume,
+  and cardiac output.
+Documentation: https://doi.org/10.13026/133d-pk11
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/133d-pk11
+  ARN: arn:aws:s3:::physionet-open/scg-rhc-wearable-database/
+  Region: us-east-1
+  Type: S3 Bucket

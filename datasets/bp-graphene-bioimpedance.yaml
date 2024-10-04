@@ -1,0 +1,32 @@
+Name: Continuous Cuffless Monitoring of Arterial Blood Pressure via Graphene Bioimpedance
+  Tattoos
+Description: '
+
+  Continuous monitoring of arterial blood pressure (BP) in non-clinical (ambulatory)
+  settings is essential for a proper understanding of numerous health conditions.
+  While conventional ambulatory BP devices exist, they are uncomfortable, bulky, and
+  intrusive. In this work, we introduce a dataset of BP measurement using atomically-thin
+  graphene electronic tattoos (GETs) and bioimpedance (Bio-Z) as measurement modality.
+  The Bio-Z is measured from radial and ulnar arteries on the wrist. Afterward, a
+  machine learning regression model is employed to relate the recorded bioimpedance
+  to BP, yielding an effective beat-to-beat BP monitoring platform. In this database,
+  we are sharing the raw time data for the 4-channel GET Bioimpedance signals with
+  BP and&nbsp;PPG signals. The GETs are used to monitor arterial blood pressure from
+  N=7 individuals for 300+ minutes each. A medical-grade BP monitoring device, Finapres
+  NOVA, was used to measure the subject&#39;s control BP during the experiments. On
+  average, each participant underwent 4&plusmn;1 hours of continuous BP monitoring.
+  Altogether, we performed on average ~2500&plusmn;600 BP measurements per participant,
+  which resulted in a total of 18667 datapoints.
+
+  '
+Documentation: https://doi.org/10.13026/ce62-pc98
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/ce62-pc98
+  ARN: arn:aws:s3:::physionet-open/bp-graphene-bioimpedance/
+  Region: us-east-1
+  Type: S3 Bucket

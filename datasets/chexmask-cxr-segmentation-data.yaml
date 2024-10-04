@@ -1,0 +1,23 @@
+Name: 'CheXmask Database: a large-scale dataset of anatomical segmentation masks for
+  chest x-ray images'
+Description: 'The CheXmask Database presents a comprehensive, uniformly annotated
+  collection of chest radiographs, constructed from five public databases: ChestX-ray8,
+  Chexpert, MIMIC-CXR-JPG, Padchest and VinDr-CXR. The database aggregates 657,566
+  anatomical segmentation masks derived from images which have been processed using
+  the HybridGNet model to ensure consistent, high-quality segmentation. To confirm
+  the quality of the segmentations, we include in this database individual Reverse
+  Classification Accuracy (RCA) scores for each of the segmentation masks. This dataset
+  is intended to catalyze further innovation and refinement in the field of semantic
+  chest X-ray analysis, offering a significant resource for researchers in the medical
+  imaging domain.'
+Documentation: https://doi.org/10.13026/pgag-by42
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Creative Commons Attribution 4.0 International Public License
+Resources:
+- Description: https://doi.org/10.13026/pgag-by42
+  ARN: arn:aws:s3:::physionet-open/chexmask-cxr-segmentation-data/
+  Region: us-east-1
+  Type: S3 Bucket

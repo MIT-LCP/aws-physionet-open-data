@@ -1,0 +1,25 @@
+Name: STAFF III Database
+Description: The STAFF III database was acquired during 1995&ndash;96 at Charleston
+  Area Medical Center (WV, USA) where single prolonged balloon inflation had been
+  introduced to achieve optimal results of percutaneous transluminal coronary angiography
+  (PTCA) procedures, replacing the typical series of brief inflations. The lead investigator
+  Dr. Stafford Warren designed the study protocol together with Dr. Galen Wagner at
+  Duke University Medical Center (Durham, NC, USA); Dr. Michael Ringborn (Blekinge
+  Hospital, Karlskrona, Sweden) was responsible for data acquisition. The database
+  consists of ECG recordings from 104 patients, accounting for substantial inter-patient
+  variability in reaction to prolonged balloon inflation as well as variability of
+  heart rhythm and waveform morphology. Only patients receiving elective PTCA in one
+  of the major coronary arteries were included. Patients suffering from ventricular
+  tachycardia, undergoing an emergency procedure, or demonstrating signal loss during
+  acquisition, were excluded.
+Documentation: https://doi.org/10.13026/C20P4H
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C20P4H
+  ARN: arn:aws:s3:::physionet-open/staffiii/
+  Region: us-east-1
+  Type: S3 Bucket

@@ -1,0 +1,20 @@
+Name: Lightweight 12-lead ECG viewer for MATLAB
+Description: Electrocardiograms (ECGs) provide time-varying measurements of the electrical
+  activity of the heart. These signals can provide insights into underlying aspects
+  of heart health and disease. Here we provide software for viewing 12-lead ECG files
+  (in .txt format) in a form familiar to any clinician or ECG expert, facilitating
+  manual measurements of intervals and amplitudes. An executable version of the software,
+  without the need for Matlab installation, can be downloaded separately. The input
+  file is a 10-second 12 lead ECG text file, the output from the Magellan ECG Research
+  Workstation Software Version 2.0 (GE Marquette Medical Systems, USA).
+Documentation: https://doi.org/10.13026/sm8m-v308
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: MIT License
+Resources:
+- Description: https://doi.org/10.13026/sm8m-v308
+  ARN: arn:aws:s3:::physionet-open/12-lead-ecg-viewer-matlab/
+  Region: us-east-1
+  Type: S3 Bucket

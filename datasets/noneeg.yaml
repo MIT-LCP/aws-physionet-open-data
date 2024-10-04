@@ -1,0 +1,18 @@
+Name: Non-EEG Dataset for Assessment of Neurological Status
+Description: This database contains non-EEG physiological signals collected at Quality
+  of Life Laboratory at University of Texas at Dallas, used to infer the neurological
+  status (including physical stress, cognitive stress, emotional stress and relaxation)
+  of 20 healthy subjects. The data was collected using non-invasive wrist worn biosensors
+  and consists of electrodermal activity (EDA), temperature, acceleration, heart rate
+  (HR), and arterial oxygen level (SpO2).
+Documentation: https://doi.org/10.13026/C26Q2Z
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C26Q2Z
+  ARN: arn:aws:s3:::physionet-open/noneeg/
+  Region: us-east-1
+  Type: S3 Bucket

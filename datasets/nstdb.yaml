@@ -1,0 +1,17 @@
+Name: MIT-BIH Noise Stress Test Database
+Description: This database includes 12 half-hour ECG recordings and 3 half-hour recordings
+  of noise typical in ambulatory ECG recordings. The noise recordings were made using
+  physically active volunteers and standard ECG recorders, leads, and electrodes;
+  the electrodes were placed on the limbs in positions in which the subjects&rsquo;
+  ECGs were not visible.
+Documentation: https://doi.org/10.13026/C2HS3T
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C2HS3T
+  ARN: arn:aws:s3:::physionet-open/nstdb/
+  Region: us-east-1
+  Type: S3 Bucket

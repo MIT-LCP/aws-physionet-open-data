@@ -1,0 +1,16 @@
+Name: 'Spontaneous Termination of Atrial Fibrillation: The PhysioNet/Computing in
+  Cardiology Challenge 2004'
+Description: 'The fifth annual PhysioNet/Computers in Cardiology Challenge focusses
+  on this question: Is it possible to predict if (or when) an episode of atrial fibrillation
+  will end spontaneously?'
+Documentation: https://physionet.org/content/challenge-2004/
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://physionet.org/content/challenge-2004/
+  ARN: arn:aws:s3:::physionet-open/challenge-2004/
+  Region: us-east-1
+  Type: S3 Bucket

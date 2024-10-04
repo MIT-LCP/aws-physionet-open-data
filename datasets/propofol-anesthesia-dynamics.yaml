@@ -1,0 +1,26 @@
+Name: Behavioral and autonomic dynamics during propofol-induced unconsciousness
+Description: 'During general anesthesia, both behavioral and autonomic changes are
+  caused by the administration of anesthetics such as propofol. Propofol produces
+  unconsciousness by creating highly structured oscillations in brain circuits. The
+  anesthetic also has autonomic effects due to its actions as a vasodilator and myocardial
+  depressant. Understanding how autonomic dynamics change in relation to propofol-induced
+  unconsciousness is an important scientific and clinical question since anesthesiologists
+  often infer changes in level of unconsciousness from changes in autonomic dynamics.
+
+
+  Therefore, we present a dataset combining physiology-based indices for heart rate
+  variability and electrodermal activity with a robust statistical tool to compare
+  behavioral and multimodal autonomic changes before, during, and after propofol-induced
+  unconsciousness. This dataset was recorded from nine healthy volunteers during computer-controlled
+  administration of propofol.&nbsp;'
+Documentation: https://doi.org/10.13026/2rbc-1r03
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: PhysioNet Contributor Review Health Data License 1.5.0
+Resources:
+- Description: https://doi.org/10.13026/2rbc-1r03
+  ARN: arn:aws:s3:::physionet-open/propofol-anesthesia-dynamics/
+  Region: us-east-1
+  Type: S3 Bucket

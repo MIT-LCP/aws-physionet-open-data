@@ -1,0 +1,15 @@
+Name: Measurement of Global Electrical Heterogeneity
+Description: The Global Electrical Heterogeneity (GEH) concept is based on the theory
+  of Wilson&rsquo;s electrical gradient vector, which characterizes the degree of
+  heterogeneity of the total recovery time across the ventricles.
+Documentation: https://physionet.org/content/geh/
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://physionet.org/content/geh/
+  ARN: arn:aws:s3:::physionet-open/geh/
+  Region: us-east-1
+  Type: S3 Bucket

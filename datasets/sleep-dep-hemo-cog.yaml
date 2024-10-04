@@ -1,0 +1,34 @@
+Name: Effect of 24-hour sleep deprivation on cerebral hemodynamics and cognitive performance
+Description: 'Sleep deprivation (SD) is associated&nbsp;with decreased cognitive performance,
+  but&nbsp;the underlying mechanisms are poorly understood. To assess the impact of
+  SD on cerebral hemodynamics&nbsp;in the frontal lobe, functional near-infrared spectroscopy
+  (fNIRS) measurements were carried out on young subjects.&nbsp;Ten young healthy
+  adults (males, age of 27.6&plusmn;3.7 years, one left-handed participant) were recruited
+  for this study conducted in&nbsp;2018 at University of Oklahoma, Translational Geroscience
+  Laboratory. The examination protocol began with assessment of&nbsp;cognitive performance
+  with the aid of Cambridge Neuropsychological Test Automated Battery (CANTAB). The
+  following tests were used: motor screening task, rapid visual processing, reaction
+  time, spatial working memory, paired associated&nbsp;learning, and delayed matching
+  to visual sample.&nbsp;Subsequently fNIRS measurements were taken from&nbsp;participants
+  while carrying out a&nbsp;finger-tapping exercise. Each subject was presented with
+  an auditory command to perform a finger-tapping task over three sets of 10 seconds
+  using the left index finger and three sets of 10 seconds using the right index finger,
+  with 10 seconds inter-stimulus periods between each task.&nbsp;Functional NIRS recordings
+  were acquired using a NIRScout platform (NIRx Medical Technologies LLC, NY, USA).&nbsp;Relative
+  oxy- and deoxyhemoglobin time series can be obtained from measured intensities by
+  applying&nbsp;differential modified Beer Lamber Law.&nbsp;All measurements&nbsp;were
+  performed before and after 24 hours of SD. The&nbsp;dataset forms the basis for
+  two studies that explore: (1)&nbsp;the relationship between sleep deprivation, cognitive
+  performance, and&nbsp;neurovascular coupling response&nbsp;in young healthy adults;
+  and (2)&nbsp;sleep deprivation and functional connectivity of the frontal cortex.'
+Documentation: https://doi.org/10.13026/669h-cx11
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: PhysioNet Contributor Review Health Data License 1.5.0
+Resources:
+- Description: https://doi.org/10.13026/669h-cx11
+  ARN: arn:aws:s3:::physionet-open/sleep-dep-hemo-cog/
+  Region: us-east-1
+  Type: S3 Bucket

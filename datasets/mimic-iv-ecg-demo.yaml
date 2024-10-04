@@ -1,0 +1,19 @@
+Name: MIMIC-IV-ECG Demo - Diagnostic Electrocardiogram Matched Subset Demo
+Description: The MIMIC-IV-ECG Demo module contains 659 diagnostic electrocardiograms
+  across 92 unique patients. These 92 patients overlap with the patients from the
+  MIMIC-IV Clinical Demo and are also part of the MIMIC-IV Clinical Database. These
+  diagnostic ECGs use 12 leads and are 10 seconds in length. They are sampled at 500
+  Hz. This open access demo allows researchers to assess whether the MIMIC-IV-ECG
+  module is appropriate for their research and facilitates demonstration of these&nbsp;diagnostic
+  ECGs.
+Documentation: https://doi.org/10.13026/4eqn-kt76
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Open Database License v1.0
+Resources:
+- Description: https://doi.org/10.13026/4eqn-kt76
+  ARN: arn:aws:s3:::physionet-open/mimic-iv-ecg-demo/
+  Region: us-east-1
+  Type: S3 Bucket

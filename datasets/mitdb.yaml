@@ -1,0 +1,20 @@
+Name: MIT-BIH Arrhythmia Database
+Description: The MIT-BIH Arrhythmia Database contains 48 half-hour excerpts of two-channel
+  ambulatory ECG recordings, obtained from 47 subjects studied by the BIH Arrhythmia
+  Laboratory between 1975 and 1979. Twenty-three recordings were chosen at random
+  from a set of 4000 24-hour ambulatory ECG recordings collected from a mixed population
+  of inpatients (about 60%) and outpatients (about 40%) at Boston&#39;s Beth Israel
+  Hospital; the remaining 25 recordings were selected from the same set to include
+  less common but clinically significant arrhythmias that would not be well-represented
+  in a small random sample.
+Documentation: https://doi.org/10.13026/C2F305
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C2F305
+  ARN: arn:aws:s3:::physionet-open/mitdb/
+  Region: us-east-1
+  Type: S3 Bucket

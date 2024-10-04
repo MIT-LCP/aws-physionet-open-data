@@ -1,0 +1,17 @@
+Name: SEMIA
+Description: SEMIA, version 3.0.1, is a tool for viewing time series of diagnostic
+  and morphology parameters of long-term ambulatory recordings, and ST segment annotations
+  with their corresponding ECG waveforms of the Long-Term ST Database (LTST DB). SEMIA
+  was created during the development of the LTST DB, a project supported by Medtronic,
+  Inc. (Minneapolis, MN, USA) and Zymed, Inc. (Camarillo, CA, USA).
+Documentation: https://physionet.org/content/semia/
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://physionet.org/content/semia/
+  ARN: arn:aws:s3:::physionet-open/semia/
+  Region: us-east-1
+  Type: S3 Bucket

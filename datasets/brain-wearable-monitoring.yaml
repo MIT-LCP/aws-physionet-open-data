@@ -1,0 +1,36 @@
+Name: Regulation of Brain Cognitive States through Auditory, Gustatory, and Olfactory
+  Stimulation with Wearable Monitoring
+Description: Inspired by advances in wearable technologies, we design and perform
+  human-subject experiments to investigate the impacts of applying safe actuation
+  (i.e., auditory, gustatory, and olfactory) for the purpose of regulating the cognitive
+  arousal state and enhancing the performance state.&nbsp;In two separate experiments,
+  participants are instructed to engage in a working memory task known as the&nbsp;n-back
+  task. To modulate their brain state, we introduce various interventions, including
+  listening to different genres of music in the first experiment, and consuming coffee
+  and smelling perfume in the second experiment.&nbsp;Employing only wearable devices
+  for human monitoring and using safe actuation intervention are the key components
+  of the performed experiments. This dataset contains subjects&#39; correct/incorrect
+  responses along with their reaction times. In these experiments, we employed two
+  Empatica wristbands and one muse headband to collect their physiological data. The
+  data from Empatica contains participants&#39;&nbsp;electrodermal activity (EDA),&nbsp;heart
+  rate (HR),&nbsp;blood volume pulses (BVP),&nbsp;skin surface temperature,&nbsp;Photoplethysmography
+  (PPG),&nbsp;and 3-axis&nbsp;accelerometer data.&nbsp;Using a muse headband, we also
+  collected&nbsp;Electroencephalography&nbsp;(EEG) signals from four sensors. By creating
+  a dataset that addresses the current lack of publicly available data for utilizing
+  wearable devices and safe everyday stimuli to manage internal brain states, our
+  research enables further investigations into machine learning and system identification.
+  It eventually paves the way for smarter work environments in the future. The ultimate
+  goal is to develop practical and automated personalized closed-loop systems that
+  can effectively regulate internal brain states and enhance the overall quality of
+  life.
+Documentation: https://doi.org/10.13026/jr6f-wc85
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/jr6f-wc85
+  ARN: arn:aws:s3:::physionet-open/brain-wearable-monitoring/
+  Region: us-east-1
+  Type: S3 Bucket

@@ -1,0 +1,16 @@
+Name: Heartprints - A Dynamical Portrait of Cardiac Arrhythmia
+Description: As part of an effort to visualize and to understand the dynamics of cardiac
+  arrhythmias with frequent ventricular ectopy, we have developed a new representational
+  technique termed &quot;heartprints.&quot; These heartprints are a combination of
+  seven histograms generated from an annotated record of heartbeat time intervals.
+Documentation: https://physionet.org/content/heartprints/
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://physionet.org/content/heartprints/
+  ARN: arn:aws:s3:::physionet-open/heartprints/
+  Region: us-east-1
+  Type: S3 Bucket

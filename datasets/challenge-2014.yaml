@@ -1,0 +1,21 @@
+Name: 'Robust Detection of Heart Beats in Multimodal Data: The PhysioNet/Computing
+  in Cardiology Challenge 2014'
+Description: This challenge aims to encourage the exploration of robust methods for
+  locating heart beats in continuous long-term data from bedside monitors and similar
+  devices that record not only ECG but usually other physiologic signals as well,
+  including pulsatile signals that directly reflect cardiac activity, and other signals
+  that may have few or no observable markers of heart beats. Our goal is to accelerate
+  development of open-source research tools that can reliably, efficiently, and automatically
+  analyze data such as that contained in the MIMIC II Waveform Database, making use
+  of all relevant information.
+Documentation: https://physionet.org/content/challenge-2014/
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://physionet.org/content/challenge-2014/
+  ARN: arn:aws:s3:::physionet-open/challenge-2014/
+  Region: us-east-1
+  Type: S3 Bucket

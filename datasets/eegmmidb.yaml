@@ -1,0 +1,13 @@
+Name: EEG Motor Movement/Imagery Dataset
+Description: ''
+Documentation: https://doi.org/10.13026/C28G6P
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C28G6P
+  ARN: arn:aws:s3:::physionet-open/eegmmidb/
+  Region: us-east-1
+  Type: S3 Bucket

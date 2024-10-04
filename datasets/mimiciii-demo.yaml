@@ -1,0 +1,22 @@
+Name: MIMIC-III Clinical Database Demo
+Description: 'MIMIC-III&nbsp;is a large, freely-available database comprising deidentified
+  health-related data associated with over 40,000 patients who stayed in critical
+  care units of the Beth Israel Deaconess Medical Center between 2001 and 2012 [1].
+  The&nbsp;MIMIC-III Clinical Database is available on PhysioNet (doi: 10.13026/C2XW26).
+  Though deidentified, MIMIC-III contains detailed information regarding the care
+  of real patients, and as such requires credentialing before access. To allow researchers
+  to ascertain whether the database is suitable for their work, we have manually curated
+  a demo subset, which contains information for&nbsp;100 patients also present in
+  the MIMIC-III Clinical Database. Notably, the demo dataset does not include free-text
+  notes.'
+Documentation: https://doi.org/10.13026/C2HM2Q
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Open Database License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C2HM2Q
+  ARN: arn:aws:s3:::physionet-open/mimiciii-demo/
+  Region: us-east-1
+  Type: S3 Bucket

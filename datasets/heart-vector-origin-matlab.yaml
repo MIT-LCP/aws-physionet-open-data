@@ -1,0 +1,34 @@
+Name: Heart Vector Origin Point Detection and Time-Coherent Median Beat Construction
+Description: 'An appropriate selection of the heart vector origin point defines the
+  ECG&rsquo;s baseline, which then affects all subsequent ECG measurements. We introduce
+  software capable of automatically identifying the heart vector origin point and
+  constructing&nbsp;a time-coherent median beat. We define the heart vector electrocardiographic
+  (VCG) origin point based on its electrophysiological and biophysical meaning: the
+  electrically quiet, or isoelectric state of the heart when the heart vector does
+  not move in 3D space. The electrically silent period is defined as the segment between
+  the end of repolarization and the onset of P-wave (if present), or the beginning
+  of the QRS complex.
+
+
+  The definition of the VCG origin point determines the definition of the vector magnitude
+  ECG baseline. Vector-Magnitude that is zeroed at the origin of the heart vector
+  provides the most physiologically accurate cardiac beat. This is a fundamental step
+  for any further global ECG and VCG measurements. Time-coherent median beat preserves
+  the physiological sequence of cardiac activation and recovery. The time-coherent
+  approach takes an easily detectable fiducial point (maximum |dV/dt|)&nbsp; as detected
+  only on one ECG lead (e.g., X). Corresponding time-points on two other leads (e.g.,
+  Y and Z) are taken regardless of their morphological features. Such an approach
+  significantly reduces the chance of error and preserves the physiological sequence
+  of cardiac activation and recovery. The algorithm requires an input of a 10-second
+  raw digital orthogonal ECG signal (XYZ leads).'
+Documentation: https://doi.org/10.13026/jfeg-4820
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: MIT License
+Resources:
+- Description: https://doi.org/10.13026/jfeg-4820
+  ARN: arn:aws:s3:::physionet-open/heart-vector-origin-matlab/
+  Region: us-east-1
+  Type: S3 Bucket

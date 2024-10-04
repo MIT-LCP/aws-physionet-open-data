@@ -1,0 +1,14 @@
+Name: MIT-BIH Arrhythmia Database P-Wave Annotations
+Description: This database contains reference P-wave annotations for twelve signals
+  from the MIT-BIH Arrhythmia Database.
+Documentation: https://doi.org/10.13026/C2108F
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C2108F
+  ARN: arn:aws:s3:::physionet-open/pwave/
+  Region: us-east-1
+  Type: S3 Bucket

@@ -1,0 +1,15 @@
+Name: 'Reducing False Arrhythmia Alarms in the ICU: The PhysioNet/Computing in Cardiology
+  Challenge 2015'
+Description: The 2015 PhysioNet/CinC Challenge aims to encourage the development of
+  algorithms to reduce the incidence of false alarms in the Intensive Care Unit (ICU).
+Documentation: https://doi.org/10.13026/c9fg-a467
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/c9fg-a467
+  ARN: arn:aws:s3:::physionet-open/challenge-2015/
+  Region: us-east-1
+  Type: S3 Bucket

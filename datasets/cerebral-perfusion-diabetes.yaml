@@ -1,0 +1,33 @@
+Name: Cerebral perfusion and cognitive decline in type 2 diabetes
+Description: 'This dataset was collected as part of a study to explore vasoregulation
+  and blood flow in patients with type 2 Diabetes mellitus. It comprises cerebral
+  blood, autonomic functions, laboratory and gait variables in 70 patients with type
+  2 DM and 70 healthy controls (50-85 years old). Diabetes mellitus is a prevalent,
+  costly condition with high morbidity and mortality that affects nearly 6.3% of the
+  population in the United States. Diabetes mellitus alters the permeability of the
+  blood-brain barrier, thus affecting regional metabolism and microcirculatory regulation.
+  Predictors of cerebrovascular complications of diabetes that are evidence-based
+  on cerebral blood flow, MRI imaging, and cognitive testing are lacking.
+
+
+  Blood flow velocities were measured in the anterior and middle cerebral arteries
+  using transcranial Doppler ultrasound. Cerebral vasoregulation was evaluated by
+  comparing blood flow velocity responses during hypocapnia and hypercapnia, Valsalva
+  maneuver, head-up tilt and sit-to-stand test using simultaneous recordings of cardiovascular
+  variables, blood flow velocity in the anterior and middle cerebral artery using
+  transcranial Doppler and respiratory variables. We applied continuous arterial spin
+  labeling at 3 Tesla MRI to evaluate regional distribution of cerebral blood flow
+  and vasomotor reactivity to CO2. Cognitive and executive functions were assessed
+  via a battery of psychometric measures. Gait and balance were characterized from
+  dynamics of foot pressure distribution and center of pressure displacement.'
+Documentation: https://doi.org/10.13026/whjz-e968
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Creative Commons Attribution 4.0 International Public License
+Resources:
+- Description: https://doi.org/10.13026/whjz-e968
+  ARN: arn:aws:s3:::physionet-open/cerebral-perfusion-diabetes/
+  Region: us-east-1
+  Type: S3 Bucket

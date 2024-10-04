@@ -1,0 +1,29 @@
+Name: TWAnalyser - A T-wave Alternans Detector
+Description: 'This software suite consists of Matlab implementations of the widely
+  used Spectral Method (SM) and Modified Moving Average (MMA) for T-wave alternans
+  (TWA) detection. It was initially developed for the PhysioNet/CinC Challenge 2008,
+  in which these and a wide variety of other methods were evaluated and compared in
+  blinded tests, using a data set that included ECGs with and without TWA as well
+  as synthetic ECGs with calibrated amounts of artificial TWA. The implementation
+  of SM presented here scored second in the open-source category and third overall
+  with a score of 0.881. TWAanalyser&#39;s implementation of MMA received a score
+  of 0.400. (A third method, which combined both algorithms, scored 0.834, not quite
+  as well as SM alone. In this case, ECGs in which SM did not detect TWA were assigned
+  a TWA estimate of 0, and all others were assigned the MMA algorithm&#39;s TWA estimate.)
+  Most of the work to improve the score resulted from adjustments to filtering and
+  alignment.
+
+
+  TWAnalyser has been tested on both Windows XP (SP2) and Linux (Fedora Core 4-9)
+  using Matlab R13 (6.5) and R2006b (7.3).'
+Documentation: https://physionet.org/content/twanalyser/
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://physionet.org/content/twanalyser/
+  ARN: arn:aws:s3:::physionet-open/twanalyser/
+  Region: us-east-1
+  Type: S3 Bucket

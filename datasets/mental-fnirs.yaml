@@ -1,0 +1,34 @@
+Name: Mental workload during n-back task captured by TransCranial Doppler (TCD) sonography
+  and functional Near-Infrared Spectroscopy (fNIRS) monitoring
+Description: 'The authors used this dataset to assess the neurovascular coupling responses
+  evoked by a cognitive paradigm with the aid of TransCranial Doppler (TCD) sonography
+  and functional Near-InfraRed Spectroscopy (fNIRS). Fourteen healthy young individuals
+  were recruited for this study conducted in 2018 at the University of Oklahoma, Translational
+  Geroscience Laboratory (age: 31&plusmn;5.94 years, BMI: 24.9&plusmn;2.95). The following
+  physiological signals were measured non-invasively during the examination: relative
+  concentration of oxy- and deoxyhemoglobin (HbO and HbR, respectively), and cerebral
+  Blood Flow Velocity (BFV) in the middle cerebral arteries for the entire duration
+  of the testing (~11 minutes). In this study, fNIRS signals from the frontal cortex
+  were acquired by a NIRScout platform (NIRx Medical Technologies LLC, NY, USA) at
+  a sampling frequency of 3.9 Hz, HbO and HbR time series signals can be obtained
+  by applying the differential modified Beer Lambert Law on the preprocessed records
+  of near-infrared intensities. BFV was recorded using TCD sonography (Digi-Lite,
+  Rimed, Raanana, Israel) by placing 2 Mhz ultrasound probes over the left and right
+  temporal acoustic windows. The paradigm used for cognitive testing was an n-back
+  task where the participant was administered a series of alphabetical letters on
+  the computer screen and had to provide a response whenever a stimulus is presented
+  that is the same as the one presented n trials previously. The examination protocol
+  consisted of the following 134 second sessions: 0-back, 1-back, 0-back, and 2-back.
+  This dataset was collected for the following study: &quot;Increased Cognitive Workload
+  Evokes Greater Neurovascular Coupling Responses in Healthy Young Adults&quot;.'
+Documentation: https://doi.org/10.13026/zfb2-1g43
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: PhysioNet Contributor Review Health Data License 1.5.0
+Resources:
+- Description: https://doi.org/10.13026/zfb2-1g43
+  ARN: arn:aws:s3:::physionet-open/mental-fnirs/
+  Region: us-east-1
+  Type: S3 Bucket

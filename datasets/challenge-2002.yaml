@@ -1,0 +1,35 @@
+Name: 'RR Interval Time Series Modeling: The PhysioNet/Computing in Cardiology Challenge
+  2002'
+Description: 'We are pleased to announce the third in our annual series of challenges
+  from PhysioNet and Computers in Cardiology. We received many suggestions for challenge
+  topics, and encourage you to  write to us with further suggestions. We chose the
+  topic for this year&#39;s challenge not only for its intrinsic interest, but also
+  because it is quite different from the previous two challenges.
+
+
+  Heart rate variability has attracted much attention from researchers since the early
+  1980s. It has long been understood that a metronomic heart rate is pathological,
+  and that the healthy heart is influenced by multiple neural and hormonal inputs
+  that result in variations in interbeat (RR) intervals, at time scales ranging from
+  less than a second to 24 hours. Even after 20 years of study, new analytic techniques
+  continue to reveal properties of the time series of RR intervals. Much research
+  in this area aims to discover or to explain how specific changes in variability
+  can be related to specific pathologies.
+
+
+  Given how much is known about heart rate variability, it might be thought that simulating
+  a realistic sequence of RR intervals would be an easy task. The intricate interdependencies
+  of variations at different scales, however, make it difficult to create a simulation
+  of sufficient realism to mislead an experienced observer, and it may be even harder
+  to deceive a program designed to quantify these subtle features.'
+Documentation: https://physionet.org/content/challenge-2002/
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://physionet.org/content/challenge-2002/
+  ARN: arn:aws:s3:::physionet-open/challenge-2002/
+  Region: us-east-1
+  Type: S3 Bucket

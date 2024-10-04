@@ -1,0 +1,21 @@
+Name: ECG Effects of Dofetilide, Moxifloxacin, Dofetilide+Mexiletine, Dofetilide+Lidocaine
+  and Moxifloxacin+Diltiazem
+Description: The ECGDMMLD database contains data from a randomized, double-blind,
+  5-period crossover clinical trial in 22 healthy male and female subjects, 18 to
+  35 years of age, to compare the electrophysiological response of hERG potassium
+  channel blocking drugs with and without the addition of late sodium or calcium channel
+  blocking drugs. The 5 treatment periods are 1) dofetilide alone, 2) mexiletine with
+  and without dofetilide, 3) lidocaine with and without dofetilide, 4) moxifloxacin
+  with and without diltiazem and 5) placebo. During each treatment period, 12 blood
+  samples for pharmacokinetic measurements are obtained with matched 12-lead ECG recordings.
+Documentation: https://doi.org/10.13026/C2D016
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C2D016
+  ARN: arn:aws:s3:::physionet-open/ecgdmmld/
+  Region: us-east-1
+  Type: S3 Bucket

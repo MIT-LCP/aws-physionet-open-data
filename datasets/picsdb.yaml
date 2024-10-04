@@ -1,0 +1,17 @@
+Name: Preterm Infant Cardio-Respiratory Signals Database
+Description: The Preterm Infant Cardio-respiratory Signals (PICS) database contains
+  simultaneous ECG and respiration recordings of ten preterm infants collected from
+  the Neonatal Intensive Care Unit (NICU) of the University of Massachusetts Memorial
+  Healthcare. Statistical features based on linear estimates of heart rate are used
+  to predict episodes of bradycardia.
+Documentation: https://doi.org/10.13026/C2QQ2M
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C2QQ2M
+  ARN: arn:aws:s3:::physionet-open/picsdb/
+  Region: us-east-1
+  Type: S3 Bucket

@@ -1,0 +1,27 @@
+Name: Pulse Amplitudes from electrodermal activity collected from healthy volunteer
+  subjects at rest and under controlled sedation
+Description: This dataset of electrodermal activity was collected from 11 healthy
+  volunteer subjects who were awake and at rest in seated position and 11 different
+  healthy volunteers who were under controlled propofol sedation. For the awake and
+  at rest subjects, the activity was recorded from each subject&#39;s non-dominant
+  hand for one hour at 256 Hz. For the controlled propofol sedation subjects, the
+  activity was recorded from each subject&#39;s left hand for about 3-4 hours at 500
+  Hz.  From the raw data, EDA pulses were extracted and the pulse times and amplitudes
+  reported. Electrodermal activity measures changing electrical conductance of the
+  skin as an indicator of sweat gland activity. Sweat glands are a primitive part
+  of the fight-or-flight response. These data were collected as part of a larger study
+  to understand and build computational models for autonomic nervous system activity
+  (including electrodermal activity) with approval from the Massachusetts Institute
+  of Technology Committee on the Use of Humans as Experimental Subjects (COUHES) and
+  the Massachusetts General Hospital Human Research Committee.
+Documentation: https://doi.org/10.13026/r9p1-bk90
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: PhysioNet Contributor Review Health Data License 1.5.0
+Resources:
+- Description: https://doi.org/10.13026/r9p1-bk90
+  ARN: arn:aws:s3:::physionet-open/eda-rest-sedation/
+  Region: us-east-1
+  Type: S3 Bucket

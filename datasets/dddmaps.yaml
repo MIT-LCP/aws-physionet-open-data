@@ -1,0 +1,16 @@
+Name: Dynamical Density Delay Maps
+Description: This project contains Matlab functions for visualizing the behavior of
+  complex systems by means of the  dynamical density delay mapping (&quot;D3-Map&quot;)
+  technique . This simple-to-implement visualization method provides an animated representation
+  of a system&#39;s dynamics.
+Documentation: https://physionet.org/content/dddmaps/
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://physionet.org/content/dddmaps/
+  ARN: arn:aws:s3:::physionet-open/dddmaps/
+  Region: us-east-1
+  Type: S3 Bucket

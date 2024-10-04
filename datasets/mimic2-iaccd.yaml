@@ -1,0 +1,20 @@
+Name: Clinical data from the MIMIC-II database for a case study on indwelling arterial
+  catheters
+Description: This dataset was created for the purpose of&nbsp;a case study in the&nbsp;book:&nbsp;Secondary
+  Analysis of Electronic Health Records, published by Springer in 2016. In particular,
+  the dataset was used throughout Chapter 16 (Data Analysis) by Raffa J. et al. to
+  investigate the effectiveness of indwelling arterial catheters in hemodynamically
+  stable patients with respiratory failure for mortality outcomes. The dataset is
+  derived from MIMIC-II, the&nbsp;publicly-accessible critical care database. It contains
+  summary&nbsp;clinical data and&nbsp; outcomes for 1,776 patients.
+Documentation: https://doi.org/10.13026/C2NC7F
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C2NC7F
+  ARN: arn:aws:s3:::physionet-open/mimic2-iaccd/
+  Region: us-east-1
+  Type: S3 Bucket

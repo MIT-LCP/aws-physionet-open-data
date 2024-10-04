@@ -1,0 +1,18 @@
+Name: Gait in Neurodegenerative Disease Database
+Description: Neuro-degenerative disease often affects gait and mobility. To understand
+  better the pathophysiology of these diseases and to improve our ability to measure
+  responses to therapeutic interventions, it may be helpful to quantify gait dynamics
+  accurately. The records in this database are from patients with Parkinson&#39;s
+  disease (n = 15), Huntington&#39;s disease (n = 20), or amyotrophic lateral sclerosis
+  (n = 13). Records from 16 healthy control subjects are also included here.
+Documentation: https://doi.org/10.13026/C27G6C
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C27G6C
+  ARN: arn:aws:s3:::physionet-open/gaitndd/
+  Region: us-east-1
+  Type: S3 Bucket

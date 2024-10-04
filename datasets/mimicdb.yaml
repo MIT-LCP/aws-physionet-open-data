@@ -1,0 +1,18 @@
+Name: MIMIC Database
+Description: The MIMIC Database includes data recorded from over 90 ICU patients.
+  The data in each case include signals and periodic measurements obtained from a
+  bedside monitor as well as clinical data obtained from the patient&#39;s medical
+  record. The recordings vary in length; almost all of them are at least 20 hours,
+  and many are 40 hours or more. In all, the database contains nearly 200 patient-days
+  of real-time signals and accompanying data.
+Documentation: https://doi.org/10.13026/C2JS34
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C2JS34
+  ARN: arn:aws:s3:::physionet-open/mimicdb/
+  Region: us-east-1
+  Type: S3 Bucket

@@ -1,0 +1,21 @@
+Name: MIMIC-IV-ED Demo
+Description: MIMIC-IV-ED is a publicly accessible database of over 400,000 emergency
+  department (ED) admissions to the Beth Israel Deaconess Medical Center between 2011
+  and 2019. Access to MIMIC-IV-ED requires registration on PhysioNet, identity verification,
+  completion of human participant training, and signing of a data use agreement.&nbsp;Here,
+  we have provided an openly available demo of MIMIC-IV-ED containing&nbsp;a subset
+  of&nbsp;100 patients. Being a derivative dataset, the MIMIC-IV-ED demo is deidentified
+  according to the same standard as MIMIC-IV-ED. The demo is intended to support workshops,
+  educational material, exploration of MIMIC-IV-ED, and other aims enabled by an openly
+  available dataset.
+Documentation: https://doi.org/10.13026/jzz5-vs76
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Open Database License v1.0
+Resources:
+- Description: https://doi.org/10.13026/jzz5-vs76
+  ARN: arn:aws:s3:::physionet-open/mimic-iv-ed-demo/
+  Region: us-east-1
+  Type: S3 Bucket

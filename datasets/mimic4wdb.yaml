@@ -1,0 +1,23 @@
+Name: MIMIC-IV Waveform Database
+Description: 'The MIMIC-IV Waveform Database is a large collection of physiological
+  signals and measurements from patients in intensive care units, including electrocardiograms,
+  photoplethysmograms, respiration, invasive and non-invasive blood pressure, and
+  more. These measurements and signals are obtained directly from the bedside monitor,
+  and provide a detailed view into the physiology of critically ill patients.
+
+
+  Combining this database with the clinical information found in MIMIC-IV provides
+  a broad, cross-sectional example of the data available to caregivers in a modern
+  ICU. We hope that this database will provide a foundation for future improvements
+  to monitoring technology as well as data-driven diagnosis and treatment.'
+Documentation: https://doi.org/10.13026/a2mw-f949
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Open Database License v1.0
+Resources:
+- Description: https://doi.org/10.13026/a2mw-f949
+  ARN: arn:aws:s3:::physionet-open/mimic4wdb/
+  Region: us-east-1
+  Type: S3 Bucket

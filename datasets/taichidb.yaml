@@ -1,0 +1,27 @@
+Name: Tai Chi, Physiological Complexity, and Healthy Aging - Gait
+Description: This dataset&nbsp;contains gait&nbsp;and electromyography (EMG) data
+  collected during a hybrid study that included a two-arm randomized clinical trial
+  (RCT) along with an additional observational comparison group. The RCT arm investigated
+  the short-term effects of a Tai Chi intervention on 60 Tai Chi healthy na&iuml;ve
+  subjects, aged 50-79 years, living within the Greater Boston area, and reporting
+  no regular Tai Chi practice within the past 5 years. Subjects were either randomized
+  to 6 months of Tai Chi or usual care. Subjects came in for a baseline visit along
+  with 3 month and 6 month follow-ups. The observational comparison group consisted
+  of 27 healthy Tai Chi experts, aged 50-79 years, currently engaged in an active
+  Tai Chi training regimen, each with at least 5 years of Tai Chi experience. The
+  expert group was tested only at their baseline visit. The gait and EMG data were
+  simultaneously recorded during walking at the subjects preferred speed for 10 minutes
+  under the single-task condition and for 90 seconds under the dual-task condition.
+  Our aim for this study was to use gait and EMG data to gain a better understanding
+  of the mobility changes associated with Tai Chi training.
+Documentation: https://doi.org/10.13026/gq9q-rr81
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/gq9q-rr81
+  ARN: arn:aws:s3:::physionet-open/taichidb/
+  Region: us-east-1
+  Type: S3 Bucket

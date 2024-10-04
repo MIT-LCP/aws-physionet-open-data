@@ -1,0 +1,28 @@
+Name: VitalDB, a high-fidelity multi-parameter vital signs database in surgical patients
+Description: In modern anesthesia, multiple medical devices are used simultaneously
+  to comprehensively monitor real-time vital signs to optimize patient care and improve
+  surgical outcomes. However, interpreting the dynamic changes of time-series biosignals
+  and their correlations is a difficult task even for experienced anesthesiologists.
+  Recent advanced machine learning technologies have shown promising results in biosignal
+  analysis, however, research and development in this area is relatively slow due
+  to the lack of biosignal datasets for machine learning. The VitalDB (Vital Signs
+  DataBase) is an open dataset created specifically to facilitate machine learning
+  studies related to monitoring vital signs in surgical patients. This dataset contains
+  high-resolution multi-parameter data from 6,388 cases, including 486,451 waveform
+  and numeric data tracks of 196 intraoperative monitoring parameters, 73 perioperative
+  clinical parameters, and 34 time-series laboratory result parameters. All data is
+  stored in the public cloud after anonymization. The dataset can be freely accessed
+  and analysed using application programming interfaces and Python library. The VitalDB
+  public dataset is expected to be a valuable resource for biosignal research and
+  development.
+Documentation: https://doi.org/10.13026/czw8-9p62
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Creative Commons Attribution 4.0 International Public License
+Resources:
+- Description: https://doi.org/10.13026/czw8-9p62
+  ARN: arn:aws:s3:::physionet-open/vitaldb/
+  Region: us-east-1
+  Type: S3 Bucket

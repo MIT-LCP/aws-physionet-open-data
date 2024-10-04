@@ -1,0 +1,17 @@
+Name: 'Predicting Acute Hypotensive Episodes: The PhysioNet/Computing in Cardiology
+  Challenge 2009'
+Description: This year&#39;s challenge is the tenth in the annual series of open challenges
+  hosted by PhysioNet in cooperation with Computers in Cardiology. The goal of the
+  challenge is to predict which patients in the challenge dataset will experience
+  an acute hypotensive episode beginning within the forecast window.
+Documentation: https://physionet.org/content/challenge-2009/
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://physionet.org/content/challenge-2009/
+  ARN: arn:aws:s3:::physionet-open/challenge-2009/
+  Region: us-east-1
+  Type: S3 Bucket

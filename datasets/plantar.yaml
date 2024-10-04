@@ -1,0 +1,21 @@
+Name: Modulation of Plantar Pressure and Muscle During Gait
+Description: Modulation of plantar pressure and muscle during gait was acquired to
+  investigate the influences of electrical stimulation (ES) of the tibialis anterior
+  (TA) on plantar pressure and the gastrocnemius medialis (GM) activity during gait
+  in healthy adults. The database consists of plantar pressure distribution and two
+  muscles activity during gait from 20 healthy male adults. We evaluated the activities
+  of gastrocnemius medialis and lateralis during gait in the preliminary study, and
+  observed that gastrocnemius medialis is more sensitive to gait. Therefore, we recorded
+  GM and TA in this study. Only subjects who do not have any history of either neurological
+  or orthopedic impairments were included..
+Documentation: https://doi.org/10.13026/C20Q1Q
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C20Q1Q
+  ARN: arn:aws:s3:::physionet-open/plantar/
+  Region: us-east-1
+  Type: S3 Bucket

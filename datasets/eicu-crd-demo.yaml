@@ -1,0 +1,22 @@
+Name: eICU Collaborative Research Database Demo
+Description: This project is a demo version of the eICU Collaborative Research Database,
+  a multi-center database comprised of deidentified health data for over 200,000 admissions
+  to ICUs across the United States between 2014-2015. The database includes vital
+  sign measurements, care plan documentation, severity of illness measures, diagnosis
+  information, and treatment information. Data is collected through the Philips eICU
+  program, a critical care telehealth program that delivers information to caregivers
+  at the bedside. This open access demo allows researchers to ascertain whether the
+  eICU Collaborative Research Database is suitable for their work. It includes over
+  2,500 unit stays selected from 20 of the larger hospitals in the eICU Collaborative
+  Research Database.
+Documentation: https://doi.org/10.13026/4mxk-na84
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Open Database License v1.0
+Resources:
+- Description: https://doi.org/10.13026/4mxk-na84
+  ARN: arn:aws:s3:::physionet-open/eicu-crd-demo/
+  Region: us-east-1
+  Type: S3 Bucket

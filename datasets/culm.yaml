@@ -1,0 +1,16 @@
+Name: Complex Upper-Limb Movements
+Description: The Complex Upper-Limb Movements database contains hand trajectory data
+  collected from ten subjects as they performed various upper-limb motor tasks. The
+  data was used in the above-referenced manuscript to identify the motor primitives
+  contributing to the observed motor patterns.
+Documentation: https://doi.org/10.13026/C24T0M
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C24T0M
+  ARN: arn:aws:s3:::physionet-open/culm/
+  Region: us-east-1
+  Type: S3 Bucket

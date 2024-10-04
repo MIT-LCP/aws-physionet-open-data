@@ -1,0 +1,28 @@
+Name: Heart and lung segmentations for MIMIC-CXR/MIMIC-CXR-JPG and Montgomery County
+  TB databases
+Description: Segmenting the heart and lungs from chest X-ray images is essential for
+  accurate disease diagnosis, enabling the calculation of image-derived digital biomarkers
+  for cardiopulmonary health assessment. Furthermore, creation of annotated data sets
+  can enhance development of machine learning applications in disease detection, reduce
+  image noise for better clarity, or promote standardization for tracking disease
+  progression or treatment effects. Generation of manual segmentations is time intensive
+  process and it also requires access to trained medical professionals to verify the
+  quality and accuracy of the scans. Originally made to train heart and lung segmentation/detection
+  models for cardiomegaly diagnosis, the manual segmentations in this data paper are
+  published here in hope of aiding development of AI models relating to heart and
+  lungs identification in chest X-rays. This database presents the heart and lung
+  segmentations for 200 semi-randomly chosen MIMIC-CXR/MIMIC-CXR-JPG posterior-anterior
+  chest X-rays for the purpose of training detection and segmentation networks. Additionally,
+  it contains the heart segmentations for the 138 posterior-anterior chest X-rays
+  in the Montgomery Country tuberculosis database.
+Documentation: https://doi.org/10.13026/0k35-mb65
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/0k35-mb65
+  ARN: arn:aws:s3:::physionet-open/heart-lung-segmentations-data/
+  Region: us-east-1
+  Type: S3 Bucket

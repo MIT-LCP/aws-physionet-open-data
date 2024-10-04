@@ -1,0 +1,15 @@
+Name: BIDMC PPG and Respiration Dataset
+Description: This dataset contains signals and numerics extracted from the much larger
+  MIMIC II matched waveform Database, along with manual breath annotations made from
+  two annotators, using the impedance respiratory signal.
+Documentation: https://doi.org/10.13026/C2208R
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://doi.org/10.13026/C2208R
+  ARN: arn:aws:s3:::physionet-open/bidmc/
+  Region: us-east-1
+  Type: S3 Bucket

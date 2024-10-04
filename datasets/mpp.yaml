@@ -1,0 +1,16 @@
+Name: Multiscale Poincare Plots
+Description: Poincar&eacute; delay maps are widely used in the analysis of cardiac
+  interbeat interval (RR) dynamics. To facilitate visualization of the structure of
+  these complex time series, we introduced a methodology called multiscale Poincar&eacute;
+  (MSP) plots.
+Documentation: https://physionet.org/content/mpp/
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://physionet.org/content/mpp/
+  ARN: arn:aws:s3:::physionet-open/mpp/
+  Region: us-east-1
+  Type: S3 Bucket

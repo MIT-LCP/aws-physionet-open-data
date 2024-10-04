@@ -1,0 +1,16 @@
+Name: Cardiac Output Estimation from Arterial Blood Pressure Waveforms
+Description: This project contains the code used for a study that rigorously compares
+  11 estimates against thermodilution cardiac output (TCO) using 120 subjects from
+  the MIMIC II database (all subjects for whom multiple TCO measurements were recorded
+  at the time of the study).
+Documentation: https://physionet.org/content/cardiac-output/
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Open Data Commons Attribution License v1.0
+Resources:
+- Description: https://physionet.org/content/cardiac-output/
+  ARN: arn:aws:s3:::physionet-open/cardiac-output/
+  Region: us-east-1
+  Type: S3 Bucket

@@ -1,0 +1,27 @@
+Name: Simulated Obstructive Disease Respiratory Pressure and Flow
+Description: 'The dataset presented is from 20 healthy adults at the University of
+  Canterbury, where the tests were approved by its Human Research Ethics Committee
+  (HREC) ethics. Data was collected using a modular device simulating the effects
+  of Chronic Obstructive Pulmonary Disease (COPD) in healthy people, and in particular,
+  the gas trapping due to airway collapse in expiration. Pressure and flow data were
+  recorded in this trial using a y-split venturi with the device attached to the exhalatory
+  outlet by the mouth.&nbsp; Data was collected using continuous positive airway pressure
+  (CPAP) ventilation at positive end-expiratory pressure (PEEP) settings of 4 and
+  8 cmH20, and without the CPAP at zero end-expiratory pressure (ZEEP). The recording
+  time for each test was 45 seconds with time in between each test to allow subjects
+  to recover. Each subject filled out a de-identified demographic questionnaire to
+  gather background information, including age, height, sex, and history of smoking,
+  vaping, or asthma. The data collected is intended to be used as a preliminary validation
+  method of respiratory computational models, where the device use avoids the need
+  to test unhealthy people or use invasive methods. '
+Documentation: https://doi.org/10.13026/xczc-3662
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Creative Commons Attribution 4.0 International Public License
+Resources:
+- Description: https://doi.org/10.13026/xczc-3662
+  ARN: arn:aws:s3:::physionet-open/simulated-obstructive-disease/
+  Region: us-east-1
+  Type: S3 Bucket

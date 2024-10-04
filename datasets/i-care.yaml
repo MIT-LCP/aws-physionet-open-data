@@ -1,0 +1,20 @@
+Name: 'I-CARE: International Cardiac Arrest REsearch consortium Database'
+Description: The International Cardiac Arrest REsearch consortium (I-CARE) Database
+  includes baseline clinical information and continuous electroencephalogram (EEG)
+  and electrocardiogram (ECG) recordings from comatose patients following cardiac
+  arrest. The patients were admitted to an intensive care unit (ICU) in one of seven
+  academic hospitals in the U.S. and Europe and monitored for several hours to several
+  days. The long-term neurological function of the patients was determined using the
+  Cerebral Performance Category scale.
+Documentation: https://doi.org/10.13026/m33r-bj81
+Contact: https://physionet.org/about/#contact_us
+UpdateFrequency: Not updated
+Tags:
+- aws-pds
+License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public
+  License
+Resources:
+- Description: https://doi.org/10.13026/m33r-bj81
+  ARN: arn:aws:s3:::physionet-open/i-care/
+  Region: us-east-1
+  Type: S3 Bucket
