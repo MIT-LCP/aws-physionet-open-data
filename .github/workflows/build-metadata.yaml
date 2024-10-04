@@ -34,7 +34,7 @@ jobs:
         with:
           repository: Chrystinne/pr-metadata-generator
           path: pr-repo
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.MY_PERSONAL_TOKEN }}
 
       # Step 6: Copy the datasets folder to the target repo
       - name: Copy datasets to target repo
@@ -70,7 +70,7 @@ jobs:
       - name: Create pull request
         uses: peter-evans/create-pull-request@v5
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.MY_PERSONAL_TOKEN }}
           commit-message: "Add datasets from metadata generator"
           branch: metadata-update-branch
           base: main
