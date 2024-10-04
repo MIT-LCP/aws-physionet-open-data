@@ -47,20 +47,26 @@ jobs:
           cd pr-repo
           git checkout -b metadata-update-branch
 
-      # Step 8: Commit changes
+      # Step 8: Set up Git user
+      - name: Set up Git user
+        run: |
+          git config --global user.email "chrystinne@gmail.com"
+          git config --global user.name "chrystinne"
+
+      # Step 9: Commit changes
       - name: Commit changes
         run: |
           cd pr-repo
           git add datasets
           git commit -m "Add datasets from metadata generator"
 
-      # Step 9: Push the new branch
+      # Step 10: Push the new branch
       - name: Push changes
         run: |
           cd pr-repo
           git push origin metadata-update-branch
 
-      # Step 10: Create a pull request
+      # Step 11: Create a pull request
       - name: Create pull request
         uses: peter-evans/create-pull-request@v5
         with:
