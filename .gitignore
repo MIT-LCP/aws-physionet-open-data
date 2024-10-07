@@ -52,3 +52,6 @@ pip-delete-this-directory.txt
 
 # ZIP files
 *.zip
+
+# yaml files
+datasets/
