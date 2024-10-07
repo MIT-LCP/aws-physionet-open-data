@@ -1,34 +1,34 @@
 name: Build Metadata and Create PR
 
 on:
-  workflow_dispatch:  # Allows the workflow to be triggered manually
+  workflow_dispatch:  # Permite que o fluxo de trabalho seja acionado manualmente
 
 jobs:
   run-script-and-create-pr:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
+      # Step 1: Checkout do repositório
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up Python
+      # Step 2: Configurar Python
       - name: Set up Python 3.x
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      # Step 3: Install dependencies (if any)
+      # Step 3: Instalar dependências (se houver)
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
 
-      # Step 4: Run the Python script
+      # Step 4: Executar o script Python
       - name: Run metadata generator script
         run: |
           python scripts/metadata-generator.py
 
-      # Step 5: Checkout the second repository to create the PR
+      # Step 5: Checkout do segundo repositório para criar a PR
       - name: Checkout target repository
         uses: actions/checkout@v3
         with:
@@ -36,43 +36,44 @@ jobs:
           path: pr-repo
           token: ${{ secrets.MY_PERSONAL_TOKEN }}
 
-      # Step 6: Copy the datasets folder to the target repo
+      # Step 6: Copiar a pasta datasets para o repositório de destino
       - name: Copy datasets to target repo
         run: |
           cp -r datasets pr-repo/
 
-      # Step 7: Create a new branch or switch to it if it already exists
+      # Step 7: Criar um novo branch ou alternar para ele se já existir
       - name: Create or switch to branch
         run: |
           cd pr-repo
           git fetch origin
           if git rev-parse --verify origin/metadata-update-branch; then
-            git checkout metadata-update-branch
+            git reset --hard  # Limpa quaisquer alterações locais que possam causar conflitos
+            git checkout -f metadata-update-branch  # Força o checkout para sobrescrever arquivos
             git pull origin metadata-update-branch
           else
             git checkout -b metadata-update-branch
           fi
 
-      # Step 8: Set up Git user
+      # Step 8: Configurar o usuário do Git
       - name: Set up Git user
         run: |
           git config --global user.email "chrystinne@gmail.com"
           git config --global user.name "chrystinne"
 
-      # Step 9: Commit changes
+      # Step 9: Commit das mudanças
       - name: Commit changes
         run: |
           cd pr-repo
           git add datasets
           git commit -m "Add datasets from metadata generator" || echo "No changes to commit"
 
-      # Step 10: Push the new branch
+      # Step 10: Push do novo branch
       - name: Push changes
         run: |
           cd pr-repo
           git push origin metadata-update-branch || (git pull --rebase origin metadata-update-branch && git push origin metadata-update-branch)
 
-      # Step 11: Create a pull request
+      # Step 11: Criar um pull request
       - name: Create pull request
         uses: peter-evans/create-pull-request@v5
         with:
