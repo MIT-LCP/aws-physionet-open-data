@@ -157,6 +157,7 @@ def create_yaml_files(df):
                 'Description': project_info['description'],
                 'Documentation': project_info['link'],
                 'Contact': "https://physionet.org/about/#contact_us",
+                'ManagedBy': "PhysioNet",
                 'UpdateFrequency': "Not updated",
                 'Tags': ['aws-pds'],
                 'License': project_info['license'],
@@ -167,7 +168,8 @@ def create_yaml_files(df):
                         'Region': "us-east-1",
                         'Type': "S3 Bucket"
                     }
-                ]
+                ],
+                'ADXCategories': 'Healthcare & Life Sciences Data'
             }
 
             # Save the YAML file
