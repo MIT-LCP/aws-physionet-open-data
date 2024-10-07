@@ -157,7 +157,7 @@ def create_yaml_files(df):
                 'Description': project_info['description'],
                 'Documentation': project_info['link'],
                 'Contact': "https://physionet.org/about/#contact_us",
-                'ManagedBy': "PhysioNet",
+                'ManagedBy': "[PhysioNet](https://physionet.org/)",
                 'UpdateFrequency': "Not updated",
                 'Tags': ['aws-pds'],
                 'License': project_info['license'],
