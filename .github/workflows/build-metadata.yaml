@@ -41,11 +41,17 @@ jobs:
         run: |
           cp -r datasets pr-repo/
 
-      # Step 7: Create a new branch in the target repo
-      - name: Create new branch
+      # Step 7: Create a new branch or switch to it if it already exists
+      - name: Create or switch to branch
         run: |
           cd pr-repo
-          git checkout -b metadata-update-branch
+          git fetch origin
+          if git rev-parse --verify origin/metadata-update-branch; then
+            git checkout metadata-update-branch
+            git pull origin metadata-update-branch
+          else
+            git checkout -b metadata-update-branch
+          fi
 
       # Step 8: Set up Git user
       - name: Set up Git user
@@ -58,13 +64,13 @@ jobs:
         run: |
           cd pr-repo
           git add datasets
-          git commit -m "Add datasets from metadata generator"
+          git commit -m "Add datasets from metadata generator" || echo "No changes to commit"
 
       # Step 10: Push the new branch
       - name: Push changes
         run: |
           cd pr-repo
-          git push origin metadata-update-branch
+          git push origin metadata-update-branch || (git pull --rebase origin metadata-update-branch && git push origin metadata-update-branch)
 
       # Step 11: Create a pull request
       - name: Create pull request
