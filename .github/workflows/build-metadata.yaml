@@ -60,18 +60,22 @@ jobs:
           git config --global user.email "chrystinne@gmail.com"
           git config --global user.name "chrystinne"
 
-      # Step 9: Commit das mudanças
+      # Step 9: Commit das mudanças (com debug)
       - name: Commit changes
         run: |
           cd pr-repo
-          git add datasets
+          git status  # Verifica se há mudanças detectadas pelo Git
+          git diff  # Mostra as diferenças nos arquivos para confirmação
+          git add -f datasets  # Força a adição dos arquivos modificados
           git commit -m "Add datasets from metadata generator" || echo "No changes to commit"
+          git log -1  # Verifica o último commit para depuração
 
-      # Step 10: Push do novo branch
+      # Step 10: Push do novo branch (com debug)
       - name: Push changes
         run: |
           cd pr-repo
           git push origin metadata-update-branch || (git pull --rebase origin metadata-update-branch && git push origin metadata-update-branch)
+          git branch -r  # Lista os branches remotos para debug
 
       # Step 11: Criar um pull request
       - name: Create pull request
