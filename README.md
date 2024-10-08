@@ -45,18 +45,20 @@ YAML Files: The script generates a set of .yaml files, each representing a proje
 ```
 Name: MIMIC-IV Clinical Database Demo
 
-Description: The Medical Information Mart for Intensive Care (MIMIC)-IV database
-  is comprised of deidentified electronic health records for patients admitted
+Description: The Medical Information Mart for Intensive Care (MIMIC)-IV&nbsp;database
+  is comprised&nbsp;of&nbsp;deidentified electronic health records for patients admitted
   to the Beth Israel Deaconess Medical Center. Access to MIMIC-IV is limited to credentialed
-  users. Here, we have provided an openly-available demo of MIMIC-IV containing a
-  subset of 100 patients. The dataset includes similar content to MIMIC-IV, but
-  excludes free-text clinical notes. The demo may be useful for running workshops and
-  for assessing whether the MIMIC-IV is appropriate for a study before making
+  users. Here, we have provided an openly-available demo of MIMIC-IV containing&nbsp;a
+  subset of&nbsp;100 patients. The dataset includes similar content to MIMIC-IV, but
+  excludes free-text clinical notes. The demo may be useful for running workshops&nbsp;and
+  for&nbsp;assessing whether the MIMIC-IV is appropriate for a study before making
   an access request.
 
 Documentation: https://doi.org/10.13026/dp1f-ex47
 
 Contact: https://physionet.org/about/#contact_us
+
+ManagedBy: '[PhysioNet](https://physionet.org/)'
 
 UpdateFrequency: Not updated
 
@@ -66,11 +68,12 @@ Tags:
 License: Open Data Commons Open Database License v1.0
 
 Resources:
+- Description: https://doi.org/10.13026/dp1f-ex47
+  ARN: arn:aws:s3:::physionet-open/mimic-iv-demo/
+  Region: us-east-1
+  Type: S3 Bucket
 
-  - Description: https://doi.org/10.13026/dp1f-ex47
-  - ARN: arn:aws:s3:::physionet-open/mimic-iv-demo/
-  - Region: us-east-1
-  - Type: S3 Bucket
+ADXCategories: Healthcare & Life Sciences Data
 ```
 
 ## Contributing
