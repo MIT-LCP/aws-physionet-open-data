@@ -8,6 +8,20 @@ from botocore import UNSIGNED
 from botocore.config import Config
 import html
 
+# Reviewed titles that fit the registry Name limit.
+NAME_OVERRIDES = {'eeg-eye-gaze-for-fls-tasks': 'Integration of EEG and Eye-Gaze Datasets for Performance Evaluation in '
+                               'Fundamentals of Laparoscopic Surgery (FLS) Tasks',
+ 'heartcycle': 'HeartCycle: A comprehensive dataset of synchronized impedance cardiography and '
+               'echocardiography for hemodynamic predictions',
+ 'icehg-ds': 'Induced Cesarean EHG DataSet (ICEHG DS): Electrohysterogram records of pregnancies ending in '
+             'induced and cesarean delivery',
+ 'in-gauge-and-en-gage': "In-Gauge and En-Gage: Occupants' Behaviour, Engagement, Emotion, and Comfort "
+                         'Indoors with Heterogeneous Sensors and Wearables',
+ 'senssmarttech': 'SensSmartTech database of cardiovascular signals synchronously recorded by ECG, PCG, PPG '
+                  'and accelerometer',
+ 'vitaldb-arrhythmia': 'VitalDB Arrhythmia Database: Anesthesiologist-Validated Intraoperative Arrhythmia '
+                       'Dataset with Beat and Rhythm Labels'}
+
 csv_file = './physionet-open-s3-bucket-prefixes.csv'
 zip_file_path = 'datasets.zip'
 
@@ -149,6 +163,7 @@ def create_yaml_files(df):
     Parameters:
         df (DataFrame): The DataFrame containing project slugs.
     """
+    missing = []
     for index, row in df.iterrows():
         project_slug = row['project_slug']
         
@@ -159,9 +174,12 @@ def create_yaml_files(df):
         project_info = fetch_project_details(project_slug, project_latest_version)
 
         if project_info:
+            name = NAME_OVERRIDES.get(project_slug, project_info["name"])
+            if not 5 <= len(name) <= 130:
+                raise ValueError(f"{project_slug}: Name has {len(name)} characters; expected 5–130")
             # Create YAML content
             yaml_content = {
-                'Name': project_info['name'],
+                'Name': name,
                 'Description': project_info['description'],
                 'Documentation': project_info['link'],
                 'Contact': "https://physionet.org/about/#contact_us",
@@ -185,7 +203,11 @@ def create_yaml_files(df):
             with open(yaml_file_path, 'w', encoding='utf-8') as yaml_file:
                 yaml.dump(yaml_content, yaml_file, default_flow_style=False, sort_keys=False, allow_unicode=True)
         else:
+            missing.append(project_slug)
             print(f"AVISO: sem metadados para '{project_slug}'")
+
+    if missing:
+        raise RuntimeError("Missing metadata for: " + ", ".join(missing))
 
 
 def create_zip_file():
