@@ -60,9 +60,18 @@ jobs:
           path: registry-validation
           persist-credentials: false
 
+      # The registry's legacy dependencies require Python older than 3.12.
+      - name: Set up Python 3.11 for registry validation
+        id: validation-python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
       - name: Install validation dependencies
+        env:
+          VALIDATION_PYTHON: ${{ steps.validation-python.outputs.python-path }}
         run: |
-          python -m venv "$RUNNER_TEMP/registry-venv"
+          "$VALIDATION_PYTHON" -m venv "$RUNNER_TEMP/registry-venv"
           "$RUNNER_TEMP/registry-venv/bin/python" -m pip install \
             -r registry-validation/requirements.txt PyYAML 'ruamel.yaml<0.18'
 
