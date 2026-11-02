@@ -3,6 +3,13 @@ name: Build Metadata and Create PR
 on:
   workflow_dispatch:  # Permite que o fluxo de trabalho seja acionado manualmente
 
+permissions:
+  contents: read
+
+concurrency:
+  group: metadata-update-test
+  cancel-in-progress: false
+
 jobs:
   run-script-and-create-pr:
     runs-on: ubuntu-latest
@@ -34,54 +41,24 @@ jobs:
         with:
           repository: Chrystinne/pr-metadata-generator
           path: pr-repo
+          ref: main
           token: ${{ secrets.MY_PERSONAL_TOKEN }}
 
       # Step 6: Copiar a pasta datasets para o repositório de destino
       - name: Copy datasets to target repo
         run: |
-          cp -r datasets pr-repo/
+          test -n "$(find datasets -maxdepth 1 -name '*.yaml' -print -quit)"
+          mkdir -p pr-repo/datasets
+          cp datasets/*.yaml pr-repo/datasets/
+          git -C pr-repo add -f -- datasets/*.yaml
 
-      # Step 7: Criar um novo branch ou alternar para ele se já existir
-      - name: Create or switch to branch
-        run: |
-          cd pr-repo
-          git fetch origin
-          if git rev-parse --verify origin/metadata-update-branch; then
-            git reset --hard  # Limpa quaisquer alterações locais que possam causar conflitos
-            git checkout -f metadata-update-branch  # Força o checkout para sobrescrever arquivos
-            git pull origin metadata-update-branch
-          else
-            git checkout -b metadata-update-branch
-          fi
-
-      # Step 8: Configurar o usuário do Git
-      - name: Set up Git user
-        run: |
-          git config --global user.email "chrystinne@gmail.com"
-          git config --global user.name "chrystinne"
-
-      # Step 9: Commit das mudanças (com debug)
-      - name: Commit changes
-        run: |
-          cd pr-repo
-          git status  # Verifica se há mudanças detectadas pelo Git
-          git diff  # Mostra as diferenças nos arquivos para confirmação
-          git add -f datasets  # Força a adição dos arquivos modificados
-          git commit -m "Add datasets from metadata generator" || echo "No changes to commit"
-          git log -1  # Verifica o último commit para depuração
-
-      # Step 10: Push do novo branch (com debug)
-      - name: Push changes
-        run: |
-          cd pr-repo
-          git push origin metadata-update-branch || (git pull --rebase origin metadata-update-branch && git push origin metadata-update-branch)
-          git branch -r  # Lista os branches remotos para debug
-
-      # Step 11: Criar um pull request
+      # A action gerencia a branch, o commit, o push e o PR
       - name: Create pull request
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.MY_PERSONAL_TOKEN }}
+          path: pr-repo
+          add-paths: datasets/*.yaml
           commit-message: "Add datasets from metadata generator"
           branch: metadata-update-branch
           base: main

@@ -6,6 +6,7 @@ import zipfile
 import boto3
 from botocore import UNSIGNED
 from botocore.config import Config
+import html
 
 csv_file = './physionet-open-s3-bucket-prefixes.csv'
 zip_file_path = 'datasets.zip'
@@ -99,6 +100,13 @@ def fetch_project_latest_version(project_slug):
     return None
 
 
+def clean_html(text):
+    text = re.sub(r'<[^>]+>', '', text or '')   # remove tags primeiro
+    text = html.unescape(text)                  # depois converte entidades
+    text = text.replace('\xa0', ' ').replace('\u2009', ' ')
+    return re.sub(r'\s+', ' ', text).strip()
+
+
 def fetch_project_details(project_slug, project_latest_version):
     """
     Fetch project details from the PhysioNet API.
@@ -122,8 +130,8 @@ def fetch_project_details(project_slug, project_latest_version):
         
         if len(data) > 0:
             return {
-                'name': data['title'],
-                'description': re.sub(r'<[^>]+>', '', data['abstract']),
+                'name': clean_html(data['title']),
+                'description': clean_html(data['abstract']),
                 'license': data.get('license', {}).get('name', 'Open Data Commons Open Database License v1.0'),
                 'link': f"https://doi.org/{data.get('doi')}" if data.get('doi') else f"https://physionet.org/content/{project_slug}/"
             }
@@ -159,7 +167,7 @@ def create_yaml_files(df):
                 'Contact': "https://physionet.org/about/#contact_us",
                 'ManagedBy': "[PhysioNet](https://physionet.org/)",
                 'UpdateFrequency': "Not updated",
-                'Tags': ['aws-pds'],
+                'Tags': ['aws-pds', 'life sciences'],
                 'License': project_info['license'],
                 'Resources': [
                     {
@@ -169,13 +177,15 @@ def create_yaml_files(df):
                         'Type': "S3 Bucket"
                     }
                 ],
-                'ADXCategories': 'Healthcare & Life Sciences Data'
+                'ADXCategories': ['Healthcare & Life Sciences Data']
             }
 
             # Save the YAML file
             yaml_file_path = os.path.join(yaml_dir, f"{project_slug}.yaml")
-            with open(yaml_file_path, 'w') as yaml_file:
-                yaml.dump(yaml_content, yaml_file, default_flow_style=False, sort_keys=False)
+            with open(yaml_file_path, 'w', encoding='utf-8') as yaml_file:
+                yaml.dump(yaml_content, yaml_file, default_flow_style=False, sort_keys=False, allow_unicode=True)
+        else:
+            print(f"AVISO: sem metadados para '{project_slug}'")
 
 
 def create_zip_file():
